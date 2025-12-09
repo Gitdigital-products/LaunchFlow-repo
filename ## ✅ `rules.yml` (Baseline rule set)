@@ -1,0 +1,31 @@
+security_rules:
+  - id: S001
+    name: Hardcoded API Keys
+    severity: high
+    pattern: "(api_key|secret|token)"
+ 
+  - id: S002
+    name: Weak Password Detection
+    severity: medium
+    pattern: "(123456|password|qwerty)"
+ 
+  - id: S003
+    name: SQL Injection Risk
+    severity: high
+    pattern: "(SELECT .* FROM .* WHERE .* \\+)"
+ 
+ 
+---
+ 
+✅ Scanner Config
+ 
+sentinel.config.json
+ 
+{
+  "scanPaths": ["./src", "./config"],
+  "ignore": ["node_modules", "dist"],
+  "failOnHigh": true,
+  "output": "./reports/security",
+  "formats": ["json", "txt"]
+}
+ 
