@@ -1,0 +1,32 @@
+
+{
+  "name": "launchflow",
+  "version": "1.0.0",
+  "description": "LaunchFlow - CI/CD orchestration service",
+  "main": "src/index.js",
+  "bin": {
+    "launchflow": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "build": "echo 'no build step configured'",
+    "test": "jest --runInBand",
+    "lint": "eslint . || true",
+    "fmt": "prettier --write ."
+  },
+  "author": "GitDigital Products <MAINTAINER_EMAIL>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.0",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0",
+    "nodemon": "^2.0.22",
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0"
+  }
+}
