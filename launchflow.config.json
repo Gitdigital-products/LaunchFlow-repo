@@ -1,0 +1,18 @@
+ 
+A clean project config your backend/frontend/scripts can all reference.
+ 
+{
+  "projectName": "LaunchFlow",
+  "version": "1.0.0",
+  "pipelines": {
+    "content_generation": true,
+    "email_sequence": true,
+    "ad_assets": true,
+    "landing_pages": true
+  },
+  "defaultOutput": "./output",
+  "logging": {
+    "level": "info",
+    "saveToFile": true
+  }
+}
